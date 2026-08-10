@@ -6,13 +6,9 @@ dependencies:
   - libMobility
   - numpy
   - stochasticHydroTools::RigidBodyLight
-  - pip
-  - pyvista
   - matplotlib
+  - superpunto
   - scipy
   - pyamg
   - numba
-  - plotly
   - pandas
-  - pip:
-      - icosphere
