@@ -2,13 +2,28 @@
 
 This repository corresponds to the simulations from **insert final citation here**. Here, particle suspensions of different volume fraction are sedimented in a triply periodic simulation box to obtain quantitative estimates for sedimentation velocities for spherical and rod-shaped particles.
 
+<table>
+  <tr>
+    <td>
+      <video src="https://github.com/user-attachments/assets/f232611a-0443-444e-9272-d4503b539e79"></video>
+    </td>
+    <td>
+      <video src="https://github.com/user-attachments/assets/ea1f2a63-1a91-4dd3-ba09-ded2de55535d"></video>
+    </td>
+  </tr>
+</table>
+
+
 ## Instructions
 To obtain the dependencies (requires GPU to simulate):
 ```bash
 conda env create -f environment.yml
 ```
 
-To run a simulation, you need a geometry for each individual particle and a configuration for where particles are in the simulation box. We provide particle geometry in [`structures/`](./structures/) and steric-equilibriated configurations in [`equilibrium_configs`](./equilibrium_configs/). These configurations have already been equilibriated by us on a short timescale corresponding to the repulsive potential between particles. Simulations could be performed for additional configurations but would need to be generated and equilibriated by a user. In short, this could be done by generating non-overlapping configurations for spheres and rods (we used Skoge et al.[^torquato] and PACKMOL[^packmol]). Our packings were imperfect and required equilibriation with a very short timestep to eliminate oscillations in velocity cause by nearly-overlapping particles and the steric repulsion used to separate particles.
+To run a simulation, you need a geometry for each individual particle and a configu
+
+
+ration for where particles are in the simulation box. We provide particle geometry in [`structures/`](./structures/) and steric-equilibriated configurations in [`equilibrium_configs`](./equilibrium_configs/). These configurations have already been equilibriated by us on a short timescale corresponding to the repulsive potential between particles. Simulations could be performed for additional configurations but would need to be generated and equilibriated by a user. In short, this could be done by generating non-overlapping configurations for spheres and rods (we used Skoge et al.[^torquato] and PACKMOL[^packmol]). Our packings were imperfect and required equilibriation with a very short timestep to eliminate oscillations in velocity cause by nearly-overlapping particles and the steric repulsion used to separate particles.
 
 The main simulation file [`velocity.py`](./velocity.py) is configured to re-produce results from the paper, however it requires manually assessing runs for convergence using [`test_convergence.py`](./test_convergence.py). If a run is not converged, it can be restarted from its last configuration to collect more data until convergence.
 
