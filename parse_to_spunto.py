@@ -38,20 +38,21 @@ def parse(sim_string, phi, run_number, last_frame=True):
     rng = np.random.default_rng(color_seed)
     colors = rng.uniform(0, 1, size=n_bodies)
 
+    L_shift = np.array([L, L, L])
     out_dir = "./spunto/"
     out_file = out_dir + f"{sim_string}_phi{phi:0.2g}.spunto"
     start_ind = n_steps - 1 if last_frame else 0
 
-    periodize = True
+    periodize = True  # moves one blob at a time
+    periodize_body = False  # moves entire body at once
     skip_frames = 1
-    scale_factor = 5.0
-    L_shift = np.array([L, L, L]) * scale_factor
+    scale_factor = 1.0
 
     with open(out_file, "w") as f:
         for i in range(start_ind, n_steps, skip_frames):
-            f.write(f"#Lx={L_shift[0]};Ly={L_shift[1]};Lz={L_shift[2]};\n")
             if (i - start_ind) > 0:  # splits frames
                 f.write("#\n")
+            f.write(f"#Lx={L_shift[0]};Ly={L_shift[1]};Lz={L_shift[2]};\n")
             print(i)
 
             row = dat[i, :]
@@ -65,6 +66,10 @@ def parse(sim_string, phi, run_number, last_frame=True):
                 in_body = (
                     row[j * blobs_per_body : (j + 1) * blobs_per_body, :] * scale_factor
                 )
+                center = np.mean(in_body, axis=0)
+                if periodize_body:
+                    shift = -L * np.floor(center / L + 0.5)
+                    in_body += shift
                 color = colors[j]
                 for k in range(blobs_per_body):
                     x = in_body[k, 0]
