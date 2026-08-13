@@ -16,7 +16,7 @@ def run():
 
     # when true, this loads a config from the equilibrium_configs directory and makes a directory indicated by
     # the restart_num. to use restarts, set this to false and use restart_num to indicate the config to load.
-    use_equilibrium_start = False
+    use_equilibrium_start = True
 
     ### low temp configs for sphers and rods
 
