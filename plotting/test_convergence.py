@@ -48,8 +48,8 @@ def main():
         fmt="o-",
         color="orange",
     )
-    all_mean = np.mean(dat)
-    all_std = np.std(dat)
+    all_mean = np.mean(dat, dtype=float)
+    all_std = np.std(dat, dtype=float)
     plt.axhline(all_mean, color="black", linestyle="--", label="Overall Mean")
     plt.axhspan(
         all_mean - 0.25 * all_std,

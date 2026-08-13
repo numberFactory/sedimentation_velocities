@@ -1,7 +1,6 @@
 import numpy as np
 from numba import njit, prange
 import scipy.spatial as spatial
-import matplotlib.pyplot as plt
 import os
 from enum import Enum
 import json
