@@ -14,7 +14,7 @@ The main simulation file [`velocity.py`](./velocity.py) is configured to re-prod
 
 Finally, [`parse_velocities.py`](./parse_velocities.py) will compile results into a .csv which can be plotted using [`sedimentation_plot.py](./sedimentation_plot.py). 
 
-Animations (as shown above) of a simulation can be created by changing the `save_blob_data` flag within the simulation file, converting formats using [`parse_to_spunto`](./parse_to_spunto.py), and visualizing using `spunto`. While more details can be found at the [superpunto repository](https://github.com/RaulPPelaez/superpunto), a good place to start is
+Animations (as shown above) of a simulation can be created by changing the `save_blob_data` flag within the simulation file, converting formats using [`parse_to_spunto.py`](./parse_to_spunto.py), and visualizing using `spunto`. While more details can be found at the [superpunto repository](https://github.com/RaulPPelaez/superpunto), a good place to start is
 
 ```bash
 spunto --background 1.0 1.0 1.0 --palette viridis <filename>.spunto
