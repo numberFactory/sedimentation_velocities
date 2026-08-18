@@ -13,9 +13,7 @@ authors:
     email: rfish@mines.edu
     affiliation: Colorado School of Mines
     orcid: 'https://orcid.org/0009-0009-5094-5110'
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.21999059
+doi: 10.5281/zenodo.21999059
 repository-code: 'https://github.com/numberFactory/sedimentation_velocities'
 license: MIT
 commit: 340f636efd6c9fb992ee8f04f7035f10b6412cb6
