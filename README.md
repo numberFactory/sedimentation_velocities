@@ -1,6 +1,8 @@
 # Particle sedimentation for evaporating droplets
 
-This repository corresponds to the simulations from **insert final citation here**. Here, particle suspensions of different volume fraction are sedimented in a triply periodic simulation box to obtain quantitative estimates for sedimentation velocities for spherical and rod-shaped particles.
+This repository corresponds to the simulations in "Coffee-ring deposits in concentrated suspensions of anisotropic colloids" by Nielsen et al.[^1] Here, particle suspensions of different volume fraction are sedimented in a triply periodic simulation box to obtain quantitative estimates for sedimentation velocities for spherical and rod-shaped particles.
+
+[^1]: Nielsen, Samuel S., Brian C. Seper, Ryker Fish, Brennan Sprinkle, and Michelle M. Driscoll. 2026. “Coffee-Ring Deposits in Concentrated Suspensions of Anisotropic Colloids.” APS Open Science 1 (September): 000124. https://doi.org/10.1103/rzgy-j37g.
 
 <table>
   <tr>
@@ -37,4 +39,4 @@ spunto --background 1.0 1.0 1.0 --palette viridis <filename>.spunto
 
 [^torquato]: Skoge, Monica, Aleksandar Donev, Frank H. Stillinger, and Salvatore Torquato. 2006. “Packing Hyperspheres in High-Dimensional Euclidean Spaces.” Physical Review E 74 (4): 041127. https://doi.org/10.1103/PhysRevE.74.041127.
 
-[^packmol]: Martínez, L., R. Andrade, E. G. Birgin, and J. M. Martínez. 2009. “P ACKMOL : A Package for Building Initial Configurations for Molecular Dynamics Simulations.” Journal of Computational Chemistry 30 (13): 2157–64. https://doi.org/10.1002/jcc.21224.
+[^packmol]: Martínez, L., R. Andrade, E. G. Birgin, and J. M. Martínez. 2009. “PACKMOL : A Package for Building Initial Configurations for Molecular Dynamics Simulations.” Journal of Computational Chemistry 30 (13): 2157–64. https://doi.org/10.1002/jcc.21224.
